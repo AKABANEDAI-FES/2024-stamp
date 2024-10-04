@@ -32,7 +32,6 @@ function Initialize(){
         localStorage.setItem('Stamp', JSON.stringify({Campus:0, Bivio:0, Ito:0, Apire:0, Beans:0}));
         localStorage.setItem('Exchanged', false);
     }
-    DisplayStatus();
 }
 
 Initialize();
