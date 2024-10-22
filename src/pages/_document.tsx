@@ -7,7 +7,7 @@ export default function Document() {
   return (
     <Html lang="ja">
       <Head />
-      <body className="bg-background">
+      <body className="bg-background text-black">
         <Header />
         <Main />
         <Footer />

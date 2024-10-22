@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import banesuta from "@/assets/banesuta-white.webp";
 
@@ -8,13 +9,15 @@ export const Header = () => {
       <h1 className="text-center text-white text-xs">
         東洋大学赤羽台祭 デジタルスタンプラリー
       </h1>
-      <Image
-        src={banesuta.src}
-        width={131}
-        height={40}
-        alt=""
-        className="mx-auto mt-2"
-      />
+      <Link href="/">
+        <Image
+          src={banesuta.src}
+          width={131}
+          height={40}
+          alt=""
+          className="mx-auto mt-2"
+        />
+      </Link>
     </header>
   );
 };
