@@ -5,7 +5,7 @@ export const MapLinkButton = () => {
   return (
     <Link
       href="/map"
-      className="bg-primary shadow-center rounded-xl py-3 max-w-md w-full flex flex-col items-center justify-center"
+      className="bg-primary shadow-center rounded-xl py-3 w-full flex flex-col items-center justify-center"
     >
       <PlaceOutlinedIcon className="text-white" fontSize="large" />
       <p className="mt-2 underline text-white">

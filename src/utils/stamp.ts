@@ -46,16 +46,16 @@ export const Initialize = () => {
 
 // スタンプ獲得状況の取得
 
-// GetAllStamp() 全て取得
+// GetStamps() 全て取得
 // return {Campus:int, Bivio:int, Ito:int, Apire:int, Beans:int}
-export const GetAllStamp = () => {
+export const GetStamps = () => {
   const Stamps = JSON.parse(localStorage.getItem("Stamp") || "{}") as {
     [key: string]: number;
   };
   return Stamps;
 };
 
-// GetStamp("Campus")
+// GetStamp("Campus") 一つ取得
 // return int
 
 // GetStamp(Placesに存在しない文字列)
@@ -83,15 +83,15 @@ export const SetStamp = (Place: string, Point: number) => {
   const Valid = CanStamp(Place, Point);
   if (Valid != -1 && Valid) {
     console.log("Logged By SetStamp");
-    console.log(GetAllStamp());
+    console.log(GetStamps());
 
-    const Update = GetAllStamp();
+    const Update = GetStamps();
     if (typeof Update === "object") {
       Update[Place] = Point;
       localStorage.setItem("Stamp", JSON.stringify(Update));
 
       console.log("Logged By SetStamp");
-      console.log(GetAllStamp());
+      console.log(GetStamps());
       return 0;
     } else {
       console.log("Logged By SetStamp");
@@ -144,7 +144,7 @@ export const CanStamp = (Place: string, Point: number) => {
 // スタンプ獲得状況が取得できない場合
 // return -1
 export const GetPoints = () => {
-  const Stamps = GetAllStamp();
+  const Stamps = GetStamps();
   if (typeof Stamps === "object") {
     return (
       (Stamps.Apire ?? 0) +
