@@ -1,0 +1,7 @@
+@layer normalize;
+
+@import url("normalize.css") layer(normalize);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
