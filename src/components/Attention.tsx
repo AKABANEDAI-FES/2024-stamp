@@ -1,14 +1,26 @@
 import WarningRoundedIcon from "@mui/icons-material/WarningRounded";
 import { useEffect, useState } from "react";
 
-export const Attention = ({ onClose }: { onClose: () => void }) => {
+interface AttentionProps {
+  onClose: () => void;
+  forceShow?: boolean;
+}
+
+export const Attention = ({ onClose, forceShow = false }: AttentionProps) => {
   const [step, setStep] = useState(0); // 現在のステップを管理
   const [isVisible, setIsVisible] = useState(false); // モーダルの表示状態を管理
   const steps = [
     {
       title: "スタンプラリーで遊ぶ際の注意事項",
-      description:
-        "注意事項を守らないと集めたスタンプが消えてしまう場合があります。必ず確認してください。",
+      description: (
+        <>
+          注意事項を守らないと
+          <span style={{ color: "red", fontWeight: "bold" }}>
+            集めたスタンプが消えてしまう可能性があります。
+          </span>
+          必ず確認してください。
+        </>
+      ),
     },
     {
       title: "SafariやChromeでこのページを開いてください",
@@ -25,10 +37,10 @@ export const Attention = ({ onClose }: { onClose: () => void }) => {
   useEffect(() => {
     // localStorage から attention の値を確認
     const attention = localStorage.getItem("attention");
-    if (attention !== "true") {
+    if (forceShow || attention !== "true") {
       setIsVisible(true); // 表示する
     }
-  }, []);
+  }, [forceShow]);
 
   const handleNext = () => {
     if (step < steps.length - 1) {
@@ -59,7 +71,9 @@ export const Attention = ({ onClose }: { onClose: () => void }) => {
           className="mb-4"
         />
         <h1 className="text-xl font-bold mb-2">{steps[step].title}</h1>
-        <p className="text-sm text-gray-600 mb-4">{steps[step].description}</p>
+        <p className="text-sm text-gray-600 mb-4 break-words whitespace-pre-wrap">
+          {steps[step].description}
+        </p>
         <div className="flex justify-between mt-4">
           <button
             onClick={handleBack}

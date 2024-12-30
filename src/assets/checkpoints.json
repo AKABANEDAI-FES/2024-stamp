@@ -1,13 +1,13 @@
 [
   {
-    "id": "1",
+    "id": "0192c19e-e15e-7774-8d8a-566befd61af0",
     "storage": "Apire",
     "name": "アピレ",
     "point": 1,
     "quiz": null
   },
   {
-    "id": "2",
+    "id": "0192c19e-e167-73b9-a196-896ff29c9f8f",
     "storage": "Apire",
     "name": "アピレ",
     "point": 2,
@@ -25,14 +25,14 @@
     }
   },
   {
-    "id": "3",
+    "id": "0192c19e-e168-7dec-8155-d4b3dc60711c",
     "storage": "Ito",
     "name": "イトーヨーカドー",
     "point": 1,
     "quiz": null
   },
   {
-    "id": "4",
+    "id": "0192c19e-e169-7b58-8448-47a0541acaf8",
     "storage": "Ito",
     "name": "イトーヨーカドー",
     "point": 2,
@@ -50,14 +50,14 @@
     }
   },
   {
-    "id": "5",
+    "id": "0192c19e-e16a-7b04-bf7d-b68517e5d58b",
     "storage": "Bivio",
     "name": "ビビオ",
     "point": 1,
     "quiz": null
   },
   {
-    "id": "6",
+    "id": "0192c19e-e16b-7312-8de7-9722278a3465",
     "storage": "Bivio",
     "name": "ビビオ",
     "point": 2,
@@ -75,14 +75,14 @@
     }
   },
   {
-    "id": "7",
+    "id": "0192c19e-e16c-7a53-a5af-cbd7dbc21396",
     "storage": "Beans",
     "name": "ビーンズ",
     "point": 1,
     "quiz": null
   },
   {
-    "id": "8",
+    "id": "0192c19e-e16d-7841-9ed3-d2caa38add64",
     "storage": "Beans",
     "name": "ビーンズ",
     "point": 2,
@@ -100,7 +100,7 @@
     }
   },
   {
-    "id": "9",
+    "id": "0192c19e-e16e-7b14-9334-d939f26411f1",
     "storage": "Campus",
     "name": "赤羽台キャンパス",
     "point": 2,
