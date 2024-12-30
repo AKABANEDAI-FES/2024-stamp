@@ -31,6 +31,10 @@ export const ResetStatus = () => {
 // 初期化
 export const Initialize = () => {
   if (localStorage.getItem("Stamp")) {
+    if (!localStorage.getItem("Exchanged")) {
+      localStorage.setItem("Exchanged", "false");
+      console.log("Exchanged By Initialize");
+    }
     console.log("Logged By Initialize");
     console.log("Succeeded Accsess LocalStrage");
   } else {
@@ -163,18 +167,22 @@ export const GetPoints = () => {
 // return bool
 
 export const CanExchange = () => {
-  let AllChecked = true;
+  /*let AllChecked = true;
   for (let i = 0; i <= 4; i++) {
     if (GetStamp(Places[i]) == 0) {
       AllChecked = false;
       break;
     }
-  }
+  }*/
+
   return (
-    GetPoints() >= 5 &&
-    localStorage.getItem("Exchanged") == "false" &&
-    AllChecked
+    GetPoints() >= 5 && localStorage.getItem("Exchanged") == "false" /*&&
+    AllChecked*/
   );
+};
+
+export const AlreadyExchanged = () => {
+  return localStorage.getItem("Exchanged") == "true";
 };
 
 // 交換済みに設定

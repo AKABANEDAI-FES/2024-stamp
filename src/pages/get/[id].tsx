@@ -67,6 +67,15 @@ const GetStampPage = ({ data }: Props) => {
           </div>
         ) : null}
         <StampGet name={data.name} point={data.point} />
+        {data.point === 1 ? (
+          <div className="mt-5">
+            <div className="bg-white shadow-center rounded-xl p-6 py-4 w-full">
+              <p>
+                {data.name}にはもう1ヶ所チェックポイントが設置されています！
+              </p>
+            </div>
+          </div>
+        ) : null}
         <GetPageLink />
       </div>
     </Layout>
